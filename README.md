@@ -16,6 +16,7 @@ Crea un repositorio con tu cuenta Github que contenga el contenido de este, que 
 
 En ese repositorio, realiza la siguiente configuración:
 
+ - Configura el repositorio para que no se pueda subir contenido directamente a develop y/o main.
  - Crea una nueva rama develop y súbela al repositorio.
  - Copia el contenido descargado previamente a dicha rama develop.
 
