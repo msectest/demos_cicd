@@ -8,6 +8,7 @@ En esta sesión aprenderemos:
   - Github Actions: Qué son, para qué sirven y cómo configuralas.
   - Creación y configuración de ramas.
   - Gestión de Pull requests.
+  - Introducción a Rulesets (Requerir pull-requests para merges sobre develop y main)
 
 **Tarea 1:**
 
@@ -33,7 +34,6 @@ Crea un flujo de trabajo nuevo "Hola Mundo" que saque este mensaje en consola y 
   - Cuenta Github + creación de repositorios + uso básico (commit, push).
   - Ubuntu 20.04 con permisos de administrador.
   - Instalación de dependencias.
-  - Introducción a Rulesets (Requerir pull-requests para merges sobre develop y main)
 
 **Dependencias:**
 
