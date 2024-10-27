@@ -90,10 +90,12 @@ Crear una nueva rama desde develop (por ejemplo, feature/security-check) para a�
 
 **Tarea 2:**
 
-Añadir nueva verificación para que este flujo pase a formar parte de los checkeos obligatorios:
+Añadir nueva verificación para que este flujo pase a formar parte de las verificaciones obligatorias:
 
-  - Verificar que no se puede completar la PR tras añadir el checkeo.
+  - Verificar que no se puede completar la PR tras añadir la nueva verificación.
   - Modificar el flujo para que, además, se reporten los resultados en formato SARIF. El resultado estará dipsonible en la pestaña Security.
+  - Solucionar los problemas de seguridad siguiendo las indicaciones de Snyk y añadir umbral a High. En caso de no existir estrategias de mitigación, se pueden ignorar dependencias con el comando `snyk ignore`.
+  - Comprobar que ya se puede ejecutar la PR.
   - Por último, integrar desde Snyk para ver otras posibilidaes. ¿Qué inconvenientes veis? ¿Preferencias?
 
 ## Sesión 4
