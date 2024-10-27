@@ -82,7 +82,7 @@ Aprenderemos:
 
 Crear una nueva rama desde develop (por ejemplo, feature/security-check) para añadir nuevo workflow para conectar con Snyk. Sobre esta rama, probamos en local el cliente Snyk (si no se ha instalado, instalar con instrucciones INSTALL.txt)
 
-  - Ejecutar, en el directorio base (package.json), el comando: snyk test
+  - Ejecutar, en el directorio base (package.json), el comando: `snyk test`
   - Revisar resultados. Existen vulnerabilidades, por lo que configuraremos Github para que no permita consolidar este código fuente.
   - Crear el workflow apoyándonos en las actions preconfiguradas.
   - Para ello, será imprescindible añadir un secreto con el TOKEN que se haya obtenido de: https://app.snyk.io/account
@@ -104,17 +104,17 @@ Para finalizar, vamos a desplegar el artefacto generado en Azure. Quien desee pr
 
 Aprovisionar en Azure un nuevo App Service, que será donde despleguemos la aplicación.
 
-  - Seleccionar el plan gratuito, suficiente para este ejemplol
+  - Seleccionar el plan gratuito, suficiente para este ejemplo.
   - Habilitar la autenticación básica para poder descargar el perfil de publicación.
   - Una vez aprovisionado el App Service, descargar el perfil de publicación y guardarlo para la siguiente tarea.
   - Como resultado, tendremos un dominio con una página por defecto de Microsoft publicada.
-  - IMPORTANTE: En la configuración de Azure, una vez creado el App Service, añadir como comando de inicio: pm2 serve /home/site/wwwroot --no-daemon --spa
+  - **IMPORTANTE:** En la configuración de Azure, una vez creado el App Service, añadir como comando de inicio: `pm2 serve /home/site/wwwroot --no-daemon --spa`
 
 **Tarea 2:**
 
 Crear una nueva rama desde develop (por ejemplo, feature/deploy-to-azure) para añadir un nuevo workflow que conecte con Azure. 
 
-  - Comprobar que la aplicación funciona. Para ello, en el directorio donde está el package.json, ejecutar: npm run start
+  - Comprobar que la aplicación funciona. Para ello, en el directorio donde está el package.json, ejecutar: `npm run start`
   - Configurar el perfil de publicación como secreto adicional.
   - Configurar el flujo para que actúe no en PR, sino en push, ya que la PR debería ser aprobada por el responsable del proyecto previamente. 
   - Verificar que el contenido se despliega.
