@@ -96,4 +96,25 @@ Añadir nueva verificación para que este flujo pase a formar parte de los check
   - Modificar el flujo para que, además, se reporten los resultados en formato SARIF. El resultado estará dipsonible en la pestaña Security.
   - Por último, integrar desde Snyk para ver otras posibilidaes. ¿Qué inconvenientes veis? ¿Preferencias?
 
-## Sesión 3
+## Sesión 4
+
+Para finalizar, vamos a desplegar el artefacto generado en Azure. Quien desee probar, puede utilizar el plan de estudiante https://azure.microsoft.com/es-es/free/students 
+
+**Tarea 1:**
+
+Aprovisionar en Azure un nuevo App Service, que será donde despleguemos la aplicación.
+
+  - Seleccionar el plan gratuito, suficiente para este ejemplol
+  - Habilitar la autenticación básica para poder descargar el perfil de publicación.
+  - Una vez aprovisionado el App Service, descargar el perfil de publicación y guardarlo para la siguiente tarea.
+  - Como resultado, tendremos un dominio con una página por defecto de Microsoft publicada.
+  - IMPORTANTE: En la configuración de Azure, una vez creado el App Service, añadir como comando de inicio: pm2 serve /home/site/wwwroot --no-daemon --spa
+
+**Tarea 2:**
+
+Crear una nueva rama desde develop (por ejemplo, feature/deploy-to-azure) para añadir un nuevo workflow que conecte con Azure. 
+
+  - Comprobar que la aplicación funciona. Para ello, en el directorio donde está el package.json, ejecutar: npm run start
+  - Configurar el perfil de publicación como secreto adicional.
+  - Configurar el flujo para que actúe no en PR, sino en push, ya que la PR debería ser aprobada por el responsable del proyecto previamente. 
+  - Verificar que el contenido se despliega.
