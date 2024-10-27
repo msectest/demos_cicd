@@ -68,8 +68,32 @@ Una vez configurado, ¿Permite mezclar la PR? Eliminar el password, subir a la r
 
 ## Sesión 3
 
-El objetivo de esta sesión es ver como, de modo sencillo, podemos implementar DevSecOps sin más que integrar y configurar una herramienta de detección de vulnerabilidades con Github Actiions.
+El objetivo de esta sesión es ver como, de modo sencillo, podemos implementar DevSecOps sin más que integrar y configurar una herramienta de detección de vulnerabilidades con Github Actions.
 
-**Tarea:**
+Aprenderemos:
 
+  - Conexión con herramientas externas desde Github Actions.
+  - Uso de secretos en Github Actions.
+  - Bloqueo de modificaciones inseguras.
+  - Informes de Seguridad en formato SARIF (Static Analysis Results Interchange Format).
+  - Modelado de seguridad en función de criticidad.
 
+**Tarea 1:**
+
+Crear una nueva rama desde develop (por ejemplo, feature/security-check) para añadir nuevo workflow para conectar con Snyk. Sobre esta rama, probamos en local el cliente Snyk (si no se ha instalado, instalar con instrucciones INSTALL.txt)
+
+  - Ejecutar, en el directorio base (package.json), el comando: snyk test
+  - Revisar resultados. Existen vulnerabilidades, por lo que configuraremos Github para que no permita consolidar este código fuente.
+  - Crear el workflow apoyándonos en las actions preconfiguradas.
+  - Para ello, será imprescindible añadir un secreto con el TOKEN que se haya obtenido de: https://app.snyk.io/account
+  - Revisar resultado del flujo y comprobar que se reportan las vulnerabilidades.
+
+**Tarea 2:**
+
+Añadir nueva verificación para que este flujo pase a formar parte de los checkeos obligatorios:
+
+  - Verificar que no se puede completar la PR tras añadir el checkeo.
+  - Modificar el flujo para que, además, se reporten los resultados en formato SARIF. El resultado estará dipsonible en la pestaña Security.
+  - Por último, integrar desde Snyk para ver otras posibilidaes. ¿Qué inconvenientes veis? ¿Preferencias?
+
+## Sesión 3
