@@ -18,14 +18,15 @@ En ese repositorio, realiza la siguiente configuración:
 
  - Crea una nueva rama develop y súbela al repositorio.
  - Copia el contenido descargado previamente a dicha rama develop.
- - Configura el repositorio para que no se pueda subir contenido directamente a develop y/o main.
+ - Configura el repositorio para que no se pueda subir contenido directamente a develop y/o main -> Pull Request
+ - Intenta realizar ahora un cambio directamente sobre develop. ¿Qué ocurre? 
 
 
 **Tarea 2:**
 
 Crea un flujo de trabajo nuevo "Hola Mundo" que saque este mensaje en consola y muestre el contenido del repositorio con un pequeño script Bash.
 
- - Estando en la rama develop, crea una nueva rama, por ejemplo feature/nuevo-flujo-holamundo
+ - Estando en la rama develop, crea una nueva, por ejemplo feature/nuevo-flujo-holamundo
  - Crea y edita el flujo en el directorio .github/workflows empleando la ayuda disponible en Github.
  - Sube el contenido de la nueva rama y activa el flujo creando una pull request de la rama sobre develop.
  - Verifica el funcionamiento del flujo.
