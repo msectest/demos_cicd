@@ -8,7 +8,7 @@ function App() {
       </h1>
       <h2>Continuous Delivery con Azure</h2>
       <br/>
-      <img src="ah_ah_ahh.gif" alt="ah ah ahh"></img>
+      <img src="yoda.jpg" alt="yoda"></img>
     </div>
   );
 }
