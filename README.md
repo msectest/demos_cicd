@@ -1,7 +1,7 @@
 # Github Actions
 
 Repositorio de demostración de CI/CD con github actions
-
+Versión 2
 ## Sesión 1
 
 En esta sesión aprenderemos:
