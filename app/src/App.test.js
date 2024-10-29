@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-const password = "Oops"
+const sword = "Oops"
 
 test('renders learn react link', () => {
   render(<App />);
