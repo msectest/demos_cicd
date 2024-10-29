@@ -8,7 +8,7 @@ nvm install 20
 node -v # debería imprimir `v20.18.0`
 
 # Verifica la versión de npm
-npm -v # should print `10.8.2`
+npm -v # debería imprimir `10.8.2`
 
 # IMPORTANTE: Si todo ha ido bien, descarga de librerías, en el directorio del código fuente, app (el que contiene package.json), ejecutar el siguiente comando (puede tardar)
 npm install --save-dev
