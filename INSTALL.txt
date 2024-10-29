@@ -12,12 +12,3 @@ npm -v # should print `10.8.2`
 
 # Si todo ha ido bien, descarga de librerías, en el directorio del código fuente (el que contiene package.json), ejecutar el siguiente comando (puede tardar)
 npm install --save-dev
-
-# Instalación del cliente snyk para verificaciones de seguridad
-
-npm install snyk -g
-snyk auth
-snyk auth --auth-type=token
-
-# Web con listado de vulnerabilidades (https://security.snyk.io/vuln)
-
