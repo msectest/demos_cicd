@@ -1,7 +1,7 @@
 # Github Actions
 dfsdf
 Repositorio de demostración de CI/CD con github actions
-Versión 2
+Feature!
 ## Sesión 1
 
 En esta sesión aprenderemos:
