@@ -30,6 +30,9 @@ git checkout -b develop
 git push --set-upstream origin develop
 git push // Debería mostrar everything up-to-date
 
+# Para evitar errores, podemos configurar en settings la rama develop como default, así las PR irán por defecto a dicha rama
+# y evitamos crear una PR por despiste sobre main
+
 # Y ya hemos terminado. Ya podemos trabajar normalmente creando ramas sobre develop y realizando pull-requests
 # para solicitar los merges, comprobar nuestros  controles , eetc. Ejemplo, estando en la rama develop
 
@@ -51,3 +54,4 @@ git push // Debería mostrar everything up-to-date
 
 git checkout develop
 git pull
+
