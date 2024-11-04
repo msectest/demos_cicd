@@ -59,6 +59,7 @@ Esta rama debe contener:
   - El script deberá terminar con error en caso de que se encuentre algún secreto.
 
 Marketplace Github Actions: https://github.com/marketplace/actions
+
 Tip! Códigos de salida: https://docs.github.com/en/actions/sharing-automations/creating-actions/setting-exit-codes-for-actions
 
 **Tarea 2:**
