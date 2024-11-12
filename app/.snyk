@@ -12,4 +12,9 @@ ignore:
         reason: oops
         expires: 2030-01-01T00:00:00.000Z
         created: 2024-11-12T22:19:52.513Z
+  SNYK-JS-CROSSSPAWN-8303230:
+    - '*':
+        reason: oops
+        expires: 2030-01-01T00:00:00.000Z
+        created: 2024-11-12T22:22:30.023Z
 patch: {}
