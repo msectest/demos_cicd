@@ -1,0 +1,30 @@
+# Documentación Action Snyk: https://github.com/snyk/actions/tree/master/node
+# Obtener el snyk API token de: https://app.snyk.io/account 
+# Parámetros: https://docs.snyk.io/snyk-cli/cli-reference
+# Extra: Subir resultados a Github - https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github
+# Más información: https://docs.github.com/es/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning
+
+name: Verificaciones de seguridad con Snyk
+on:
+  pull_request:
+    branches: [ "*" ]
+    
+jobs:
+  security-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descarga del repositorio
+        uses: actions/checkout@v4
+
+      - name: Ejecuta snyk para detectar vulnerabilidades
+        uses: snyk/actions/node@master
+        with:
+          args: $GITHUB_WORKSPACE/app --auth-type=token --severity-threshold=medium --sarif-file-output=snyk.sarif
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Upload result to GitHub Code Scanning
+        if: always()
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: snyk.sarif

@@ -1,0 +1,37 @@
+# Documentación Action Snyk: https://github.com/snyk/actions/tree/master/node
+# Obtener el snyk API token de: https://app.snyk.io/account para configurar como secreto Github
+# Parámetros: https://docs.snyk.io/snyk-cli/cli-reference
+
+name: Verificaciones de seguridad con Snyk v2
+
+on:
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  security-check-v2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download repository contents
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.18.0'  # Cambia a la versión de Node.js que utilices
+
+      - name: Install dependencies
+        run: |
+          cd $GITHUB_WORKSPACE/app
+          npm install
+
+      - name: Run Snyk to check for vulnerabilities
+        env:
+          THE_SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          # Instala snyk en el runner
+          npm install -g snyk
+          # Autentica Snyk con el token
+          snyk auth $THE_SNYK_TOKEN
+          # Escanea las dependencias y falla si encuentra vulnerabilidades
+          snyk test $GITHUB_WORKSPACE/app --auth-type=token --severity-threshold=medium
