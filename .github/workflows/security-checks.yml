@@ -19,7 +19,7 @@ jobs:
       - name: Ejecuta snyk para detectar vulnerabilidades
         uses: snyk/actions/node@master
         with:
-          args: $GITHUB_WORKSPACE/app --auth-type=token --severity-threshold=high --sarif-file-output=snyk.sarif
+          args: $GITHUB_WORKSPACE/app --auth-type=token --severity-threshold=medium --sarif-file-output=snyk.sarif
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
