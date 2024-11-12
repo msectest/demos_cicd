@@ -2,9 +2,14 @@
 version: v1.25.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
-  SNYK-JS-CROSSSPAWN-8303230:
+  SNYK-JS-SOURCEMAPSUPPORT-6112477:
     - '*':
         reason: oops
         expires: 2030-01-01T00:00:00.000Z
-        created: 2024-11-12T22:08:17.093Z
+        created: 2024-11-12T22:18:12.767Z
+  SNYK-JS-NTHCHECK-1586032:
+    - '*':
+        reason: oops
+        expires: 2030-01-01T00:00:00.000Z
+        created: 2024-11-12T22:19:52.513Z
 patch: {}
