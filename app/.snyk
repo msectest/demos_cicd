@@ -7,4 +7,9 @@ ignore:
         reason: No nos afecta en produccióno
         expires: 2030-01-01T00:00:00.000Z
         created: 2024-11-13T20:02:48.751Z
+  SNYK-JS-CROSSSPAWN-8303230:
+    - '*':
+        reason: No nos afecta en produccióno
+        expires: 2030-01-01T00:00:00.000Z
+        created: 2024-11-13T20:07:02.858Z
 patch: {}
