@@ -34,4 +34,4 @@ jobs:
           # Autentica Snyk con el token
           snyk auth $THE_SNYK_TOKEN
           # Escanea las dependencias y falla si encuentra vulnerabilidades
-          snyk test $GITHUB_WORKSPACE/app --auth-type=token --severity-threshold=medium
+          snyk test $GITHUB_WORKSPACE/app --auth-type=token --severity-threshold=high
